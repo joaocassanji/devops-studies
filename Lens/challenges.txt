@@ -1,0 +1,29 @@
+Version Check:
+
+Verify the current version of Lens that you have installed.
+
+Installing Lens:
+Install Lens on your local machine following the instructions provided.
+Explore Lens's user interface and familiarize yourself with its features.
+
+Adding Kubernetes Clusters to Lens:
+Connect Lens to a locally deployed Kubernetes cluster.
+Add a remote Kubernetes cluster to Lens using the provided method.
+Verify that both clusters are successfully added and accessible from Lens.
+
+Deploying and Managing Workloads through Lens:
+Deploy a sample application to one of the connected clusters using Lens.
+Scale the application's pods up and down using Lens's interface.
+Upgrade the application by changing its image version through Lens.
+
+Troubleshooting Kubernetes with Lens:
+Use Lens's built-in tools to troubleshoot a pod that is in a "Pending" state.
+View pod logs, including container logs, through Lens for debugging.
+Identify resource usage and potential bottlenecks for a specific pod using Lens.
+
+Lens Extensions:
+Explore Lens's extension marketplace and install a popular extension.
+Use the installed extension to enhance your experience with Lens.
+
+Summary:
+Summarize the key features and benefits of using Lens for managing Kubernetes clusters.

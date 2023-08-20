@@ -1,0 +1,19 @@
+Prometheus Installation on Kubernetes:
+Deploy a Prometheus server onto your Kubernetes cluster using Helm.
+Install Prometheus without using Helm, using Kubernetes manifests and YAML files.
+Verify that Prometheus is running by accessing the Prometheus web interface.
+Configure Prometheus to scrape metrics from a sample application deployed on the same cluster.
+
+Consulting Metrics with PromQL:
+Write a PromQL query to retrieve the CPU usage metric for a specific Kubernetes pod.
+Use PromQL to calculate the average response time over a certain time range for an HTTP request metric.
+Create a PromQL query that counts the number of HTTP requests with a response status of 500.
+Fetch the memory utilization metric for all pods in a particular namespace using PromQL.
+Construct a PromQL query that calculates the 95th percentile latency of a given HTTP request metric.
+
+Alertmanager:
+Install Alertmanager onto your Kubernetes cluster using Helm.
+Configure Alertmanager to receive alerts from Prometheus and send them to a Slack channel.
+Set up an Alertmanager route to group and deduplicate similar alerts.
+Create an alert rule in Prometheus that triggers an alert based on a specific metric threshold.
+Create an Alertmanager notification template to customize alert messages sent to Slack.

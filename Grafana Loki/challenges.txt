@@ -1,0 +1,19 @@
+Grafana Loki Installation on Kubernetes:
+Install Grafana Loki on your Kubernetes cluster using Helm.
+Deploy Loki without using Helm, using Kubernetes manifests and YAML files.
+Verify that Loki is running and accessible by accessing its API.
+Configure a Loki datasource in Grafana to connect to the Loki instance.
+
+Consulting Metrics with logCLI:
+Install and configure the Grafana logCLI tool on your local machine.
+Use logCLI to query logs from Loki based on a specific label selector.
+Retrieve logs from Loki using logCLI and apply time-based filtering.
+Utilize logCLI to fetch logs from a specific container within a pod.
+Apply filtering and formatting options with logCLI to extract relevant log data.
+
+Consulting Metrics with LogQL:
+Write a LogQL query to retrieve logs containing a specific keyword.
+Use LogQL to search for logs matching a specific pattern within a certain time range.
+Create a LogQL query that counts the occurrences of a particular log message.
+Implement a LogQL query to calculate the average response time of certain log events.
+Combine multiple LogQL functions to extract and aggregate information from logs.

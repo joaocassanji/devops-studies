@@ -1,0 +1,80 @@
+Version Check:
+Verify the version of Pulumi you have installed.
+
+Introducing Pulumi:
+Summarize the core concepts introduced in the video about Pulumi.
+Explain the main differences between Pulumi and other infrastructure as code tools.
+
+Creating and Running a Pulumi Project:
+Install Pulumi on your local machine following the provided instructions.
+Create a new Pulumi project and deploy a simple resource (e.g., AWS S3 bucket).
+Use Pulumi CLI commands to manage your project, including building and deploying.
+
+Declarative Infrastructure:
+Describe the benefits of managing infrastructure declaratively.
+Provide an example of an imperative command compared to a declarative resource definition.
+
+Managing Resources with Relationships:
+Create a Pulumi stack that deploys a web server and its associated database.
+Establish resource dependencies between the web server and database.
+
+Introduction to Resource Dependencies:
+Explain the importance of understanding and managing resource dependencies.
+
+Deploying a Static HTML File:
+Create a Pulumi program that deploys a static HTML file to an S3 bucket.
+Configure appropriate resource dependencies to ensure proper deployment.
+
+Recovering from Failed Deployments:
+Trigger a failed deployment and then recover using Pulumi's state management.
+
+Resources, Dependencies, Inputs, and Outputs:
+Describe the concepts of resources, dependencies, inputs, and outputs in Pulumi.
+
+Data-driven Resources:
+Implement a Pulumi program that creates multiple resources based on input data.
+
+Refactoring Pulumi Code:
+Take an existing Pulumi program and refactor it to improve organization and readability.
+
+Incorporating Multiple Providers:
+Incorporate resources from multiple cloud providers (e.g., AWS and Azure) in a Pulumi program.
+
+Resources and Providers:
+Explain the relationship between resources and providers in the context of Pulumi.
+
+Creating a Hosted Postgres Database:
+Deploy a hosted Postgres database using Pulumi and configure its settings.
+
+Providers and Their Configuration:
+Explore different provider configurations and settings within a Pulumi program.
+
+Managing Complexity:
+Discuss strategies for managing complexity when working with Pulumi projects.
+
+Troubleshooting When Deployments Fail:
+Analyze and troubleshoot a failed Pulumi deployment by examining logs and state.
+
+Learning from Manually-created Resources:
+Describe how Pulumi can manage and incorporate existing manually-created resources.
+
+Pulumi Documentation:
+Explore Pulumi's official documentation and explain how it assists users.
+
+Using Terraform Documentation with Pulumi:
+Explain how Terraform documentation can be leveraged when working with Pulumi.
+
+End-to-end DNS and SSL Configuration:
+Configure end-to-end DNS and SSL for an application using Pulumi.
+
+Designing Pulumi Stacks for Reuse:
+Discuss the concept of Pulumi stacks and how they can be designed for reuse.
+
+Introducing Stacks:
+Describe the significance of stacks in Pulumi and their role in managing environments.
+
+Varying Stack Details Using Configuration:
+Demonstrate how to use stack configurations to customize resources based on environments.
+
+Continuous Deployment and Temporary Environments:
+Implement continuous deployment and create temporary environments using Pulumi stacks.
