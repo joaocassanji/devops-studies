@@ -1,0 +1,39 @@
+Set Up Virtual Machines:
+Access Hyper-V Quick Create and create the desired number of VMs.
+
+Disable Swap and Reboot:
+swapoff -a
+reboot
+
+Install Docker:
+sudo apt-get update
+sudo apt-get install -y docker.io
+sudo systemctl enable docker
+sudo systemctl start docker
+
+Install kubeadm, kubelet, and kubectl:
+sudo apt-get update
+sudo apt-get install -y apt-transport-https curl
+curl -s https://packages.cloud.google.com/apt/doc/apt-key.gpg | sudo apt-key add -
+echo "deb https://apt.kubernetes.io/ kubernetes-xenial main" | sudo tee /etc/apt/sources.list.d/kubernetes.list
+sudo apt-get update
+sudo apt-get install -y kubelet kubeadm kubectl
+sudo apt-mark hold kubelet kubeadm kubectl
+
+Initialize the Master Node:
+sudo kubeadm init (On master node)
+
+Configure kubectl:
+Copy the Kubernetes configuration to your user's home directory to configure kubectl.
+
+mkdir -p $HOME/.kube
+sudo cp -f /etc/kubernetes/admin.conf $HOME/.kube/config
+sudo chown $(id -u):$(id -g) $HOME/.kube/config
+
+Install a Pod Network Addon:
+Install a Pod network addon to enable networking between pods. Popular choices include Calico, Flannel, and Weave.
+kubectl apply -f https://github.com/weaveworks/weave/releases/download/v2.8.1/weave-daemonset-k8s.yaml
+
+Verify Cluster Status:
+kubectl get nodes
+

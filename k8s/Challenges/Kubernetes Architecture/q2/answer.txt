@@ -1,0 +1,31 @@
+API Server:
+
+The API Server acts as the entry point and control plane for the Kubernetes cluster.
+It exposes the Kubernetes API, which allows users and external systems to interact with the cluster.
+Handles API requests, authentication, and authorization.
+Validates and processes requests for resources (such as pods, services, and nodes) and updates the state of the cluster accordingly.
+Controller Manager:
+
+The Controller Manager is a set of controller processes responsible for maintaining the desired state of the cluster.
+Includes various controllers, each focused on a specific type of resource or behavior (e.g., Node Controller, ReplicaSet Controller, Deployment Controller).
+Monitors the state of the cluster through the API Server and takes corrective actions to ensure the desired state is maintained, even in the presence of failures or changes.
+Scheduler:
+
+The Scheduler is responsible for placing pods onto available worker nodes in the cluster.
+Evaluates the resource requirements, constraints, and other attributes of pods.
+Makes intelligent decisions to ensure optimal resource utilization and performance.
+Helps distribute workload across nodes and supports features like affinity, anti-affinity, and node selectors.
+etcd:
+
+etcd is a distributed and consistent key-value store used as the backing data store for all cluster data.
+Stores configuration data, metadata, and the current state of the cluster.
+Ensures data consistency and provides a reliable source of truth for the cluster's state.
+Used by the various components (like API Server and Controller Manager) to read and update the state of the cluster.
+
+Kubelet: The kubelet is an agent that runs on each worker node and is responsible for ensuring that containers are running in a Pod. It communicates with the API server to receive pod definitions and take necessary actions to maintain the desired state.
+
+Container Runtime: The container runtime is responsible for pulling and running containers within a Pod. Kubernetes supports various container runtimes such as Docker, containerd, and CRI-O.
+
+Kube Proxy: Kube Proxy is responsible for maintaining network rules on each node. It helps to manage network connectivity between Pods and services in the cluster.
+
+Pods: Pods are the smallest deployable units in Kubernetes. A Pod can contain one or more containers that share network and storage resources. Containers within a Pod are deployed together on the same node.

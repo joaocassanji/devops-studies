@@ -1,0 +1,9 @@
+Install Minikube:
+choco install minikube
+
+Start Minikube:
+minikube start --driver=hyperv
+
+Verify Cluster Status:
+minikube status
+kubectl get nodes

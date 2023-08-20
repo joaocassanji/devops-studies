@@ -1,0 +1,19 @@
+Test Liveness Probe:
+You can do this by executing into the container of one of the Pods and causing it to become unresponsive. For example, you can use the following commands:
+
+kubectl exec -it <pod-name> -- /bin/sh
+
+Inside the container shell, you can use a command like kill to stop a process or otherwise make the application unresponsive. 
+After a few seconds, the Liveness Probe should detect this and trigger a Pod restart.
+
+
+
+Test Readiness Probe:
+To test it, you can simulate a scenario where the application is not ready to serve traffic. You can do this by modifying the application code to return a non-200 HTTP status code for the readiness check endpoint.
+
+After applying the code change, wait for a few moments, and you should observe that the affected Pod is removed from the list of endpoints for the associated Service and, therefore, no longer receives incoming traffic.
+
+
+
+Monitor Pod Recovery:
+Kubernetes will automatically try to recover the Pods based on the probe results. You can observe that the affected Pods are terminated and replaced with new ones.

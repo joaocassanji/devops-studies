@@ -1,0 +1,106 @@
+Kubernetes Architecture:
+1 - Explain the master-node architecture of Kubernetes and the function of each component.
+2 - List and briefly explain the key components of Kubernetes: API Server, Controller Manager, Scheduler, etcd, Kubelet, Container Runtime, Kube Proxy and Pods.
+
+
+Creating Clusters:
+1 - Create a local Kubernetes cluster using Minikube.
+2 - Create a Kubernetes cluster using kubeadm on separate virtual machines.
+3 - Explain the differences between Minikube and kubeadm for cluster creation.
+
+
+Deployments, ReplicaSets, Pods, and Services:
+1 - Create a Deployment for a simple application and specify the number of replicas.
+2 - Update the container image in a running Deployment.
+3 - Scale a Deployment horizontally by changing the number of replicas.
+4 - Create a Service to expose a Deployment.
+
+
+Namespaces, LimitRange, and ResourceQuota:
+1 - Create a custom Namespace and deploy resources in it.
+2 - Define LimitRange and ResourceQuota to limit resources within a Namespace.
+
+
+ConfigMap and Secrets:
+1 - Create a ConfigMap with key-value pairs and apply it to a Pod.
+2 - Create a Secret to store sensitive information and use it in a Pod.
+
+
+Liveness, Readiness, and Startup Probes:
+1 - Add Liveness, Readiness, and Startup probes to a Pod to control its state.
+2 - Test Liveness and Readiness probes and observe the Pod's behavior.
+
+
+Horizontal Pod Autoscaler and Vertical Pod Autoscaler:
+1 - Configure a Horizontal Pod Autoscaler to automatically adjust the number of replicas based on CPU usage.
+2 - Explain the difference between Horizontal Pod Autoscaler and Vertical Pod Autoscaler.
+
+
+Init Container, Post Start, and Pre Stop:
+1 - Create an Init Container that runs before the main container.
+2 - Use Post Start and Pre Stop commands to control actions before and after container startup.
+
+
+Volumes:
+1 - Create a Pod with an empty Volume and mount a directory in it.
+2 - Utilize a PersistentVolumeClaim to provide persistent storage for a Pod.
+
+
+StatefulSet, DaemonSet, Jobs, and CronJobs:
+1 - Create a StatefulSet to maintain a set of identifiable replicas.
+2 - Deploy a DaemonSet to ensure a Pod is running on each node.
+3 - Execute a Job to perform a one-time task, and a CronJob to schedule recurring tasks.
+
+
+Node Selector, Node Affinity, Pod Affinity, and Pod Anti Affinity:
+1 - Use Node Selector to schedule a Pod on a specific node.
+2 - Configure Node Affinity to influence the distribution of Pods across nodes.
+
+Security:
+Set up a Kubernetes cluster using Kind (Kubernetes in Docker).
+Apply a NetworkPolicy to restrict communication between two pods in different namespaces.
+Create a Service Account and assign a Role with read permissions to a specific resource.
+Create a ClusterRole allowing read access to all pods in the cluster and assign it to a Service Account.
+Experiment with using WaveNet to secure communication between pods in a Kind environment.
+
+Ingress Controller:
+Install the K3D Ingress Controller and expose a local application through it.
+Configure an Ingress that directs traffic based on different paths.
+Create an Ingress that routes traffic based on domain names.
+Implement a default route for the Ingress Controller.
+Deploy the Ingress Controller in a Digital Ocean cluster and set up DNS for the domain.
+
+Helm:
+Install Helm and add a chart repository.
+Create a Helm Chart to deploy a simple web application.
+Use conditional control structures (If/Else) in a Helm Chart.
+Implement a loop in a Helm Chart to create multiple similar objects.
+Create a named template and reuse it in different parts of your Helm Chart.
+
+Patterns:
+Implement the SideCar pattern in a pod by adding an auxiliary container.
+Use the Adapter pattern to modify data between a pod and an external service.
+Configure the Ambassador pattern to manage access to services within the cluster.
+Create a custom Controller to automate a specific task.
+Explore the use of Operators to simplify administration of complex resources in Kubernetes.
+
+Deployment Strategies:
+Perform a deployment using the Recreate strategy.
+Provide a practical example of the Ramped (Rolling Update) deployment strategy.
+Implement a Blue/Green deployment scenario, switching between versions of the application.
+Carry out a canary deployment, directing a portion of traffic to a new version.
+Experiment with different deployment strategies in a complex application with multiple services.
+
+Traefik:
+Install Traefik as an Ingress Controller in your cluster.
+Create a sample application and configure Traefik to route traffic to it.
+Implement Traefik middlewares to add functionalities such as authentication or redirection.
+Access and explore the Traefik administration dashboard.
+Configure TLS with Cert-Manager and Let's Encrypt to enable HTTPS in an application.
+
+Cert-Manager and Let's Encrypt:
+Install Cert-Manager in your cluster.
+Start a sample application that requires SSL certificates.
+Create Homologation and Production Issuers in Cert-Manager.
+Configure an SSL certificate using Let's Encrypt for a domain.
+Implement routes for your application using certificates managed by Cert-Manager.

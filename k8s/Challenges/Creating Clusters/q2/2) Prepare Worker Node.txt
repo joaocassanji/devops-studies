@@ -1,0 +1,28 @@
+Set Up Virtual Machines:
+Access Hyper-V Quick Create a VM.
+
+Disable Swap and Reboot:
+swapoff -a
+strace -eopenat kubectl version
+reboot
+
+Install Docker:
+sudo apt-get update
+sudo apt-get install -y docker.io
+sudo systemctl enable docker
+sudo systemctl start docker
+
+Install kubeadm, kubelet, and kubectl:
+sudo apt-get update
+sudo apt-get install -y apt-transport-https curl
+curl -s https://packages.cloud.google.com/apt/doc/apt-key.gpg | sudo apt-key add -
+echo "deb https://apt.kubernetes.io/ kubernetes-xenial main" | sudo tee /etc/apt/sources.list.d/kubernetes.list
+sudo apt-get update
+sudo apt-get install -y kubelet kubeadm kubectl
+sudo apt-mark hold kubelet kubeadm kubectl
+
+Join the Master Node:
+sudo kubeadm join <IP:PORT> --token <TOKEN> --discovery-token-ca-cert-hash sha256:<CERTIFICATE>
+
+Verify Cluster Status:
+kubectl get nodes

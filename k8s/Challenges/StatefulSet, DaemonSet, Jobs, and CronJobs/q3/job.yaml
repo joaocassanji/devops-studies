@@ -1,0 +1,15 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: my-job
+spec:
+  completions: 1
+  template:
+    metadata:
+      name: my-job-pod
+    spec:
+      containers:
+        - name: main-container
+          image: busybox:latest
+          command: ["echo", "Hello from the Job!"]
+      restartPolicy: Never

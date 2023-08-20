@@ -1,0 +1,18 @@
+The master-node architecture allows Kubernetes to provide a scalable, fault-tolerant, and flexible platform for deploying and managing containerized applications. It abstracts the underlying infrastructure, making it easier to manage and scale applications while providing features such as load balancing, automated scaling, and self-healing.
+
+In the master-node architecture, there are two main components: the Master node and the Worker nodes.
+
+Master Node:
+
+The master node is the control plane of the Kubernetes cluster, responsible for making global decisions about the cluster (for example, scheduling), as well as detecting and responding to cluster events (such as scaling up or down). The master node components include:
+
+API Server, etcd, Controller Manager and Scheduler.
+
+
+
+Worker Nodes:
+
+Worker nodes, also known as Minions, are the machines where containers are actually run. Each worker node hosts a set of containers and the necessary runtime components. The main components on a worker node are:
+
+Kubelet, Container Runtime, Kube Proxy and Pods.
+

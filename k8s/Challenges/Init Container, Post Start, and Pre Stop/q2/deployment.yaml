@@ -1,0 +1,29 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: deployment-with-lifecycle-hooks
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: my-app
+  template:
+    metadata:
+      labels:
+        app: my-app
+    spec:
+      containers:
+        - name: main-container
+          image: nginx:latest
+          lifecycle:
+            postStart:
+              exec:
+                command: ["/bin/sh", "-c", "echo Post Start Hook executed"]
+            preStop:
+              exec:
+                command: ["/bin/sh", "-c", "echo Pre Stop Hook executed"]
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxUnavailable: 1
+      maxSurge: 1
